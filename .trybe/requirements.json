@@ -1,0 +1,84 @@
+{
+  "requirements": [
+    {
+      "bonus": false,
+      "description": "01 - Classes de Modelo e DTO criadas",
+      "enabled": true,
+      "identifier": null,
+      "order": 1,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "02 - Spring Boot Actuator configurado",
+      "enabled": true,
+      "identifier": null,
+      "order": 2,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "03 - Método createMuseum da classe de serviço implementado",
+      "enabled": true,
+      "identifier": null,
+      "order": 3,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "04 - Método getClosestMuseum da classe de serviço implementado",
+      "enabled": true,
+      "identifier": null,
+      "order": 4,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "05 - Rota POST /museums implementada",
+      "enabled": true,
+      "identifier": null,
+      "order": 5,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "06 - Rota GET /museums/closest implementada",
+      "enabled": true,
+      "identifier": null,
+      "order": 6,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "07 - Classe com @ControllerAdvice tratando erros",
+      "enabled": true,
+      "identifier": null,
+      "order": 7,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "08 - Cobertura mínima de 80% das linhas em CollectionTypeController e CollectionTypeService",
+      "enabled": true,
+      "identifier": null,
+      "order": 8,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "09 - Controller, service e testes para /museums/{id} implementados",
+      "enabled": true,
+      "identifier": null,
+      "order": 9,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "10 - Dockerfile configurado corretamente",
+      "enabled": true,
+      "identifier": null,
+      "order": 10,
+      "skill_ids": []
+    }
+  ]
+}
