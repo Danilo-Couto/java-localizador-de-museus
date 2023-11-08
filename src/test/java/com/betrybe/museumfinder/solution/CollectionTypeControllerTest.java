@@ -38,4 +38,29 @@ public class CollectionTypeControllerTest {
         .andExpect(MockMvcResultMatchers.status().isNotFound());
   }
 
+  @DisplayName("getMuseusByIdIsNotFound retorna status ok e tem body")
+  @Test
+  void getMuseumIsOkAndHaveBody() throws Exception {
+    String expectedJson = "{"
+        + "\"id\": 1,"
+        + "\"name\": \"Museu Casa Memória dos Ex-Combatentes da Segunda Guerra Mundial\","
+        + "\"description\": \"Preservação da memória dos ex-combatentes da Segunda Guerra.\","
+        + "\"address\": \"SGAN 913, s/n, conjunto F , Asa Norte, 70790-130, Brasília, DF\","
+        + "\"collectionType\": \"História\","
+        + "\"subject\": \"História\","
+        + "\"url\": \"\","
+        + "\"coordinate\": {\"latitude\": -15.75063, \"longitude\": -47.9001824}"
+        + "}";
+
+    mockMvc.perform(MockMvcRequestBuilders.get("/museums/1"))
+        .andExpect(MockMvcResultMatchers.status().isOk())
+        .andExpect(MockMvcResultMatchers.content().json(expectedJson));
+  }
+
+  @DisplayName("getMuseusByIdIsNotFound retorna status NotFound")
+  @Test
+  void getMuseumIsNotFound() throws Exception {
+    mockMvc.perform(MockMvcRequestBuilders.get("/museums/10000"))
+        .andExpect(MockMvcResultMatchers.status().isNotFound());
+  }
 }
