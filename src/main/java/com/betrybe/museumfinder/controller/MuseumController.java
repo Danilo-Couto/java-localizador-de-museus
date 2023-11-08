@@ -15,12 +15,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * The type Museum controller.
+ */
 @RestController
 @RequestMapping("/museums")
 public class MuseumController {
 
   private final MuseumServiceInterface museumServiceInterface;
 
+  /**
+   * Instantiates a new Museum controller.
+   *
+   * @param museumServiceInterface the museum service interface
+   */
   @Autowired
   public MuseumController(MuseumServiceInterface museumServiceInterface) {
     this.museumServiceInterface = museumServiceInterface;
@@ -40,12 +48,16 @@ public class MuseumController {
     return museum;
   }
 
+  /**
+   * New museum response entity.
+   *
+   * @param newMuseum the new museum
+   * @return the response entity
+   */
   @PostMapping
   public ResponseEntity<MuseumCreationDto> newMuseum(@RequestBody MuseumCreationDto newMuseum) {
     Museum museum = createMuseum(newMuseum);
-
     museumServiceInterface.createMuseum(museum);
-
     MuseumCreationDto museumCreationDto = new MuseumCreationDto(
         museum.getName(),
         museum.getDescription(),
@@ -58,13 +70,21 @@ public class MuseumController {
     return ResponseEntity.status(HttpStatus.CREATED).body(museumCreationDto);
   }
 
+  /**
+   * Gets closest museum.
+   *
+   * @param lat         the lat
+   * @param lng         the lng
+   * @param maxDistance the max distance
+   * @return the closest museum
+   */
   @GetMapping("/closest")
   public ResponseEntity<MuseumDto> getClosestMuseum(
       @RequestParam(name = "lat") Double lat,
-      @RequestParam(name = "lng") Double lgn,
-      @RequestParam(name = "max_dist_km") Double maxDistance){
+      @RequestParam(name = "lng") Double lng,
+      @RequestParam(name = "max_dist_km") Double maxDistance) {
 
-    Coordinate coordinate = new Coordinate(lat, lgn);
+    Coordinate coordinate = new Coordinate(lat, lng);
 
     Museum museum = museumServiceInterface.getClosestMuseum(coordinate, maxDistance);
 

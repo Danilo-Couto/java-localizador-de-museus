@@ -11,6 +11,9 @@ public class ModelDtoConverter {
 
   /**
    * Convert from model to dto.
+   *
+   * @param museum the museum
+   * @return the museum dto
    */
   public static MuseumDto modelToDto(Museum museum) {
     return new MuseumDto(
@@ -27,6 +30,9 @@ public class ModelDtoConverter {
 
   /**
    * Convert from dto to model.
+   *
+   * @param dto the dto
+   * @return the museum
    */
   public static Museum dtoToModel(MuseumDto dto) {
     Museum museum = new Museum();
@@ -45,6 +51,9 @@ public class ModelDtoConverter {
 
   /**
    * Convert from creation dto to model.
+   *
+   * @param dto the dto
+   * @return the museum
    */
   public static Museum dtoToModel(MuseumCreationDto dto) {
     Museum museum = new Museum();
