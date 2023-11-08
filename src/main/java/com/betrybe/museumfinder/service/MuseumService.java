@@ -33,11 +33,11 @@ public class MuseumService implements MuseumServiceInterface {
     if (!CoordinateUtil.isCoordinateValid(coordinate)) {
       throw new InvalidCoordinateException();
     }
-    Optional<Museum> closestMuseum = museumFakeDatabase.getClosestMuseum(coordinate, maxDistance);
-    if (closestMuseum.isEmpty()) {
+    Optional<Museum> optionalMuseum = museumFakeDatabase.getClosestMuseum(coordinate, maxDistance);
+    if (optionalMuseum.isEmpty()) {
       throw new MuseumNotFoundException();
     } else {
-      return closestMuseum.get();
+      return optionalMuseum.get();
     }
   }
 
@@ -52,6 +52,10 @@ public class MuseumService implements MuseumServiceInterface {
 
   @Override
   public Museum getMuseum(Long id) {
-    return null;
+    Optional<Museum> optionalMuseum = museumFakeDatabase.getMuseum(id);
+    if (optionalMuseum.isEmpty()) {
+      throw new MuseumNotFoundException();
+    }
+    return optionalMuseum.get();
   }
 }
