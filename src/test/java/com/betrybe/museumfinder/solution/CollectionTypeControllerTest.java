@@ -19,7 +19,6 @@ public class CollectionTypeControllerTest {
   @Autowired
   private MockMvc mockMvc;
 
-
   @DisplayName("getCollectionTypesCount retorna status ok e tem body")
   @Test
   void getCollectionTypesCountIsOkAndHaveBody() throws Exception {
