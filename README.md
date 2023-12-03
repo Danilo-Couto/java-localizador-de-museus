@@ -6,9 +6,6 @@ Para realizar o projeto, atente-se a cada passo descrito a seguir! #vqv 🚀
 
 Aqui, você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
-## Termos e acordos
-Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta e do Manual da Pessoa Estudante da Trybe](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa-estudante).
-
 ## Entregáveis
 
 <details>
@@ -69,64 +66,6 @@ A princípio a instalação de dependências acontece antes da execução dos te
     - Você deve criar uma branch no seguinte formato: `nome-sobrenome-nome-do-projeto`;
     - Exemplo: `git checkout -b maria-soares-lessons-learned`
 
-4. Crie na raiz do projeto os arquivos que você precisará desenvolver:
-
-- Verifique que você está na raiz do projeto:
-    - Exemplo: `pwd` -> o retorno vai ser algo tipo _/Users/maria/code/**sd-0x-project-lessons-learned**_
-- Crie os arquivos index.html e style.css:
-    - Exemplo: `touch index.html style.css`
-
-5. Adicione as mudanças ao _stage_ do Git e faça um `commit`
-
-- Verifique que as mudanças ainda não estão no _stage_:
-    - Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
-- Adicione o novo arquivo ao _stage_ do Git:
-    - Exemplo:
-        - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        - `git status` (devem aparecer listados os arquivos em verde)
-- Faça o `commit` inicial:
-    - Exemplo:
-        - `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        - `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
-
-6. Adicione a sua branch com o novo `commit` ao repositório remoto
-
-- Usando o exemplo anterior: `git push -u origin maria-soares-lessons-learned`
-
-7. Crie um novo `Pull Request` _(PR)_
-
-- Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-lessons-learned/pulls)
-    - Clique no botão verde _"New pull request"_
-    - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-- Coloque um título para o seu _Pull Request_
-    - Exemplo: _"Cria tela de busca"_
-- Clique no botão verde _"Create pull request"_
-
-- Adicione uma descrição para o _Pull Request_, um título nítido que o identifique, e clique no botão verde _"Create pull request"_
-
- <img width="1335" alt="Exemplo de pull request" src="https://user-images.githubusercontent.com/42356399/166255109-b95e6eb4-2503-45e5-8fb3-cf7caa0436e5.png">
-
-- Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-0x-project-lessons-learned/pulls) e confira que o seu _Pull Request_ está criado
-
-</details>
-
-<details>
-
-<summary><strong>⌨️ Durante o desenvolvimento</strong></summary>
-
-Faça `commits` das alterações que você fizer no código regularmente, pois assim você garante visibilidade para o time da Trybe e treina essa prática para o mercado de trabalho :) ;
-
-- Lembre-se de sempre após um (ou alguns) `commits` atualizar o repositório remoto;
-- Os comandos que você utilizará com mais frequência são:
-    - `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_;
-    - `git add` _(para adicionar arquivos ao stage do Git)_;
-    - `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_;
-    - `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_;
-    - `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_.
-
-</details>
-
-<details>
 <summary><strong>🎛 Checkstyle</strong></summary>
 
 Para garantir a qualidade do código, vamos utilizar neste projeto o `Checkstyle`. Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível e de fácil manutenção! Para poder rodar o `Checkstyle` certifique-se de ter executado o comando `mvn install` dentro do repositório.
@@ -411,24 +350,3 @@ Notas:
 3. Quando for testar sua imagem, lembre-se que a exposição da porta no Dockerfile não faz o mapeamento automaticamente (diferente do `docker-compose`). Nesse caso, é necessário passar o mapeamento por parâmetro para o docker na hora da execução da imagem.
 
 </details>
-
-<details>
-<summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary>
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário.
-**Leva menos de 3 minutos!**
-
-[Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH1&template=betrybe/java-0x-projeto-localizador-de-museus)
-
-</details>
-  
-<details>
-<summary><strong>🗂 Compartilhe seu portfólio!</strong></summary>
-
-Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
-
-</details>
-
----
-
-<!-- mdi versão 1.1 projeto ⚠️ não exclua esse comentário -->
